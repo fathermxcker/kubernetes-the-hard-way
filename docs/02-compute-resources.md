@@ -28,8 +28,10 @@ This does the below:
     | ------------  | ---------------------- |:-------------:| ------------:| ----------------:|
     | master-1      | kubernetes-ha-master-1 | Master        | 192.168.5.11 |     2711         |
     | master-2      | kubernetes-ha-master-2 | Master        | 192.168.5.12 |     2712         |
+    | master-3      | kubernetes-ha-master-3 | Master        | 192.168.5.13 |     2713         |
     | worker-1      | kubernetes-ha-worker-1 | Worker        | 192.168.5.21 |     2721         |
     | worker-2      | kubernetes-ha-worker-2 | Worker        | 192.168.5.22 |     2722         |
+    | worker-3      | kubernetes-ha-worker-3 | Worker        | 192.168.5.23 |     2723         |
     | loadbalancer  | kubernetes-ha-lb       | LoadBalancer  | 192.168.5.30 |     2730         |
 
     > These are the default settings. These can be changed in the Vagrant file
