@@ -35,7 +35,7 @@ EOF
 Copy the `encryption-config.yaml` encryption config file to each controller instance:
 
 ```
-for instance in master-1 master-2; do
+for instance in master-1 master-2 master-3; do
   scp encryption-config.yaml ${instance}:~/
 done
 ```
@@ -43,7 +43,7 @@ done
 Move `encryption-config.yaml` encryption config file to appropriate directory.
 
 ```
-for instance in master-1 master-2; do
+for instance in master-1 master-2 master-3; do
   ssh ${instance} sudo mv encryption-config.yaml /var/lib/kubernetes/
 done
 ```
