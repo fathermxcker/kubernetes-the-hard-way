@@ -76,7 +76,7 @@ Documentation=https://github.com/kubernetes/kubernetes
 
 [Service]
 ExecStart=/usr/local/bin/kube-apiserver \
-  --advertise-address=192.168.5.11 \
+  --advertise-address=${INTERNAL_IP} \
   --allow-privileged=true \
   --apiserver-count=2 \
   --audit-log-maxage=30 \
