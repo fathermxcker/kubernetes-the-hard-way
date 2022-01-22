@@ -156,7 +156,8 @@ DNS.4 = kubernetes.default.svc.cluster.local
 IP.1 = 10.96.0.1
 IP.2 = 192.168.5.11
 IP.3 = 192.168.5.12
-IP.4 = 192.168.5.30
+IP.4 = 192.168.5.13
+IP.5 = 192.168.5.30
 IP.5 = 127.0.0.1
 EOF
 ```
@@ -195,7 +196,8 @@ subjectAltName = @alt_names
 [alt_names]
 IP.1 = 192.168.5.11
 IP.2 = 192.168.5.12
-IP.3 = 127.0.0.1
+IP.3 = 192.168.5.13
+IP.4 = 127.0.0.1
 EOF
 ```
 
@@ -239,7 +241,7 @@ service-account.crt
 Copy the appropriate certificates and private keys to each controller instance:
 
 ```
-for instance in master-1 master-2; do
+for instance in master-1 master-2 master-3; do
   scp ca.crt ca.key kube-apiserver.key kube-apiserver.crt \
     service-account.key service-account.crt \
     etcd-server.key etcd-server.crt \
