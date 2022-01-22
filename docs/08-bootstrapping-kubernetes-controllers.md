@@ -4,7 +4,7 @@ In this lab you will bootstrap the Kubernetes control plane across 2 compute ins
 
 ## Prerequisites
 
-The commands in this lab must be run on each controller instance: `master-1`, and `master-2`. Login to each controller instance using SSH Terminal. Example:
+The commands in this lab must be run on each controller instance: `master-1`, `master-2`, and `master-3`. Login to each controller instance using SSH Terminal. Example:
 
 ### Running commands in parallel with tmux
 
@@ -24,10 +24,10 @@ Download the official Kubernetes release binaries:
 
 ```
 wget -q --show-progress --https-only --timestamping \
-  "https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-apiserver" \
-  "https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-controller-manager" \
-  "https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-scheduler" \
-  "https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl"
+  "https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kube-apiserver" \
+  "https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kube-controller-manager" \
+  "https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kube-scheduler" \
+  "https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kubectl"
 ```
 
 Reference: https://kubernetes.io/docs/setup/release/#server-binaries
@@ -209,7 +209,7 @@ etcd-0               Healthy   {"health": "true"}
 etcd-1               Healthy   {"health": "true"}
 ```
 
-> Remember to run the above commands on each controller node: `master-1`, and `master-2`.
+> Remember to run the above commands on each controller node: `master-1`, `master-2`, and `master-3`.
 
 ## The Kubernetes Frontend Load Balancer
 
@@ -238,6 +238,7 @@ backend kubernetes-master-nodes
     option tcp-check
     server master-1 192.168.5.11:6443 check fall 3 rise 2
     server master-2 192.168.5.12:6443 check fall 3 rise 2
+    server master-3 192.168.5.13:6443 check fall 3 rise 2
 EOF
 ```
 
