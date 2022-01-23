@@ -36,7 +36,7 @@ Reference: [https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kub
 ### Linux
 
 ```
-wget https://storage.googleapis.com/kubernetes-release/release/v1.23./bin/linux/amd64/kubectl
+wget https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kubectl
 ```
 
 ```
