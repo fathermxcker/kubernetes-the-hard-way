@@ -315,6 +315,7 @@ ExecStart=/usr/local/bin/kubelet \\
   --kubeconfig=/var/lib/kubelet/kubeconfig \\
   --cert-dir=/var/lib/kubelet/pki/ \\
   --rotate-certificates=true \\
+  --rotate-server-certificates=true \\
   --network-plugin=cni \\
   --register-node=true \\
   --v=2
