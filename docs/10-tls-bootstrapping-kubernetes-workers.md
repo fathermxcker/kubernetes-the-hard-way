@@ -267,7 +267,7 @@ preferences: {}
 users:
 - name: kubelet-bootstrap
   user:
-    token: 07401b.f395accd246ae52d
+    token: $token-id.$token-secret
 EOF
 ```
 
