@@ -23,6 +23,7 @@ sudo mkdir -p /etc/kubernetes/config
 Download the official Kubernetes release binaries:
 
 ```
+mkdir /tmp/test; cd /tmp/test; \
 wget -q --show-progress --https-only --timestamping \
   "https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kube-apiserver" \
   "https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kube-controller-manager" \
@@ -31,6 +32,9 @@ wget -q --show-progress --https-only --timestamping \
 ```
 
 Reference: https://kubernetes.io/docs/setup/release/#server-binaries
+```
+ for instance in master-1 master-2 master-3; do  scp /tmp/test/kube*  ${instance}:~/; done
+```
 
 Install the Kubernetes binaries:
 
