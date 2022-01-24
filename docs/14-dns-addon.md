@@ -7,7 +7,7 @@ In this lab you will deploy the [DNS add-on](https://kubernetes.io/docs/concepts
 Deploy the `coredns` cluster add-on:
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/mmumshad/kubernetes-the-hard-way/master/deployments/coredns.yaml
+kubectl apply -f https://raw.githubusercontent.com/fathermxcker/kubernetes-the-hard-way/master/deployments/coredns.yaml
 ```
 
 > output
@@ -17,7 +17,7 @@ serviceaccount/coredns created
 clusterrole.rbac.authorization.k8s.io/system:coredns created
 clusterrolebinding.rbac.authorization.k8s.io/system:coredns created
 configmap/coredns created
-deployment.extensions/coredns created
+deployment.apps/coredns created
 service/kube-dns created
 ```
 
