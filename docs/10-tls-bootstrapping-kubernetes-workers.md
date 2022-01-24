@@ -57,8 +57,7 @@ $ wget -q --show-progress --https-only --timestamping \
   https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kubelet
 ```
 ```
-master-1$
-for instance in worker-1 worker-2 worker-3; do   scp /tmp/test/kube*  ${instance}:~/; done
+master-1$ for instance in worker-1 worker-2 worker-3; do   scp /tmp/test/kube*  ${instance}:~/; done
 ```
 
 Reference: https://kubernetes.io/docs/setup/release/#node-binaries
