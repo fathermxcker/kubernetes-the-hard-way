@@ -47,12 +47,18 @@ Copy the ca certificate to the worker node:
 ## Step 1 Configure the Binaries on the Worker node
 
 ### Download and Install Worker Binaries
-
 ```
-worker-2$ wget -q --show-progress --https-only --timestamping \
+master-1$ cd /tmp/test
+```
+```
+$ wget -q --show-progress --https-only --timestamping \
   https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kubectl \
   https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kube-proxy \
   https://storage.googleapis.com/kubernetes-release/release/v1.23.2/bin/linux/amd64/kubelet
+```
+```
+master-1$
+for instance in worker-1 worker-2 worker-3; do   scp /tmp/test/kube*  ${instance}:~/; done
 ```
 
 Reference: https://kubernetes.io/docs/setup/release/#node-binaries
