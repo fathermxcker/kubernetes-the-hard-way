@@ -130,7 +130,7 @@ stringData:
   auth-extra-groups: system:bootstrappers:worker
 EOF
 
-
+source <(kubectl completion bash)
 master-1$ kubectl create -f bootstrap-token-$TOKEN_ID.yaml
 
 ```
