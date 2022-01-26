@@ -85,6 +85,7 @@ Install the worker binaries:
 ### Move the ca certificate
 
 `worker-2$ sudo mv ca.crt /var/lib/kubernetes/`
+`for instance in worker-1 worker-2 worker-3; do   scp ca.crt  ${instance}:~/; done`
 
 # Step 1 Create the Boostrap Token to be used by Nodes(Kubelets) to invoke Certificate API
 
