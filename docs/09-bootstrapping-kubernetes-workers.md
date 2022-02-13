@@ -178,6 +178,7 @@ ExecStart=/usr/local/bin/kubelet \\
   --config=/var/lib/kubelet/kubelet-config.yaml \\
   --image-pull-progress-deadline=2m \\
   --kubeconfig=/var/lib/kubelet/kubeconfig \\
+  --log-dir=/var/log/kubernetes/kubelet \\
   --tls-cert-file=/var/lib/kubelet/${HOSTNAME}.crt \\
   --tls-private-key-file=/var/lib/kubelet/${HOSTNAME}.key \\
   --network-plugin=cni \\
